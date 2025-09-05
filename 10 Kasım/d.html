@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Kasım - Saygıyla Anıyoruz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+            flex-direction: column;
+        }
+
+        h1 {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            font-size: 3em;
+            color: #f4f4f4;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            opacity: 1;
+        }
+
+        #clock {
+            font-size: 3em;
+            color: #f4f4f4;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+        }
+
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('arka4.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-out;
+            filter: blur(4px);
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 2s ease-out;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .image-container .image-box {
+            width: 30%;
+            margin: 20px;
+            position: relative;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transform: translateX(-100%);
+            transition: transform 1.5s ease-out;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            padding: 10px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        footer .quote {
+            margin: 5px 0;
+            font-style: italic;
+        }
+
+        footer .creator {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>10 Kasım - Gazi Mustafa Kemal Atatürk'ü Saygı ile Anıyoruz</h1>
+    <div id="clock">09:00</div>
+    <div id="background"></div>
+    <div id="overlay"></div>
+
+    <div class="image-container">
+        <div class="image-box" id="image1">
+            <img src="1.jpg" alt="Resim 1">
+            <div class="caption">Geleceğimizin Teminatı: Türkiye Cumhuriyeti</div>
+        </div>
+        <div class="image-box" id="image2">
+            <img src="2.jpg" alt="Resim 2">
+            <div class="caption">Barış İçin Çalışmak: Yurtta Sulh, Cihanda Sulh</div>
+        </div>
+        <div class="image-box" id="image3">
+            <img src="4.jpg" alt="Resim 3">
+            <div class="caption">Bağımsızlık Savaşımızın Önderi</div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box" id="image4">
+            <img src="5.jpg" alt="Resim 4">
+            <div class="caption">Cumhuriyetin Kurucusu: Atatürk</div>
+        </div>
+        <div class="image-box" id="image5">
+            <img src="6.jpg" alt="Resim 5">
+            <div class="caption">Türk Gençliği, Atatürk'ün İzinde</div>
+        </div>
+        <div class="image-box" id="image6">
+            <img src="3.webp" alt="Resim 6">
+            <div class="caption">Büyük Bir Liderin Ardında Bıraktığı Efsane</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="quote">"Egemenlik, kayıtsız şartsız milletindir." - Mustafa Kemal Atatürk</div>
+        <div class="creator">Kaan Turan</div>
+    </footer>
+
+    <script src="j.js"></script>
+</body>
+</html>
